@@ -14,11 +14,11 @@ namespace BlowOut.Controllers
             return "Please call Support at <strong><u>801-555-1212</u></strong>. Thank you!";
         }
        
-        public String Email(string name, string emailAddress)
+        public String Email(string name, string email)
         {
             
             return HttpUtility.HtmlEncode("Thank you " + name 
-                + ". We will send an email to " + emailAddress);
+                + ". We will send an email to " + email);
             
         }
     }

@@ -13,6 +13,7 @@ namespace BlowOut
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Route for the Contact controller
             routes.MapRoute(
                name: "Contact",
                url: "{controller}/{action}/{name}/{email}"

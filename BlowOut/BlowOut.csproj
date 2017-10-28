@@ -154,7 +154,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\clarinet.jpg" />
     <Content Include="Content\Images\flute.jpg" />
-    <Content Include="Content\Images\indicative.jpg" />
+    <Content Include="Content\Images\indicative1.jpg" />
     <Content Include="Content\Images\sax.jpg" />
     <Content Include="Content\Images\trombone.jpg" />
     <Content Include="Content\Images\trumpet.jpg" />

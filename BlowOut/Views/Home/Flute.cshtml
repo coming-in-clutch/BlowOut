@@ -5,3 +5,69 @@
 
 <h2>Flute</h2>
 
+<img src="~/Content/Images/flute.jpg" class="img-responsive" />
+
+<h3>Condition</h3>
+
+<div class="row">
+    <!--Div for buttons-->
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-4">
+                <!--New Button-->
+
+                <button type="button" class="btn btn-default" id="bNew" onclick="New()">New</button>
+
+                <p id="new"></p>
+            </div>
+
+            <div class="col-sm-4">
+                <!--Used Button-->
+                <button type="button" class="btn btn-default" id="bUsed" onclick="Used()">Used</button>
+
+                <p id="used"></p>
+            </div>
+
+            <div class="col-sm-4">
+                <!--Clear Button-->
+                <button type="button" class="btn btn-default" onclick="Click2()">Clear</button>
+
+                <p id="clear"></p>
+            </div>
+        </div>
+
+        <!--JS for buttons-->
+        <script>
+            function New() {
+                Click2();
+                document.getElementById("price").innerHTML = "40"
+                document.getElementById("bNew").style.background = "#1F9E19"
+                document.getElementById("bUsed").style.background = "#FFFFFF"
+            }
+
+            function Used() {
+                Click2();
+                document.getElementById("price").innerHTML = "25"
+                document.getElementById("bUsed").style.background = "#1F9E19"
+                document.getElementById("bNew").style.background = "#FFFFFF"
+            }
+
+            function Click2() {
+                document.getElementById("used").innerHTML = "";
+                document.getElementById("new").innerHTML = "";
+                document.getElementById("price").innerHTML = "0";
+                document.getElementById("bUsed").style.background = "#FFFFFF"
+                document.getElementById("bNew").style.background = "#FFFFFF"
+            }
+        </script>
+
+    </div>
+    <!--div for output-->
+    <div class="col-sm-6">
+
+        <p>The price per month is: $<span id="price">0</span></p>
+
+    </div>
+</div>
+
+

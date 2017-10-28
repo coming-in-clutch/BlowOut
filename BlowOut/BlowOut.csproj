@@ -152,7 +152,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <None Include="Content\index.cshtml" />
+    <Content Include="Content\Images\clarinet.jpg" />
+    <Content Include="Content\Images\flute.jpg" />
+    <Content Include="Content\Images\indicative.jpg" />
+    <Content Include="Content\Images\sax.jpg" />
+    <Content Include="Content\Images\trombone.jpg" />
+    <Content Include="Content\Images\trumpet.jpg" />
+    <Content Include="Content\Images\tuba.jpg" />
     <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -188,6 +194,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Rentals.cshtml" />
+    <Content Include="Views\Home\Trumpet.cshtml" />
+    <Content Include="Views\Home\Trombone.cshtml" />
+    <Content Include="Views\Home\Tuba.cshtml" />
+    <Content Include="Views\Home\Flute.cshtml" />
+    <Content Include="Views\Home\Clarinet.cshtml" />
+    <Content Include="Views\Home\Saxophone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

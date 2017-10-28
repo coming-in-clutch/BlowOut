@@ -26,5 +26,40 @@ namespace BlowOut.Controllers
 
             return View();
         }
+
+        public ActionResult Rentals()
+        {
+            return View();
+        }
+
+        public ActionResult Trumpet()
+        {
+            return View();
+        }
+
+        public ActionResult Trombone()
+        {
+            return View();
+        }
+
+        public ActionResult Tuba()
+        {
+            return View();
+        }
+
+        public ActionResult Flute()
+        {
+            return View();
+        }
+
+        public ActionResult Clarinet()
+        {
+            return View();
+        }
+
+        public ActionResult Saxophone()
+        {
+            return View();
+        }
     }
 }

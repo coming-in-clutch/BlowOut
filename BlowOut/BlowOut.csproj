@@ -159,7 +159,7 @@
     <Content Include="Content\Images\trombone.jpg" />
     <Content Include="Content\Images\trumpet.jpg" />
     <Content Include="Content\Images\tuba.jpg" />
-    <Content Include="Content\main.css" />
+    <Content Include="Content\CSS\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

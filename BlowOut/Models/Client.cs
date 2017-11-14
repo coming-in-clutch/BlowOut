@@ -23,9 +23,9 @@ namespace BlowOut.Models
             public String city { get; set; }
             [Required]
             public String state { get; set; }
-            [Required (ErrorMessage ="Please make sure the ZIP code has 5 digits"]
+            [Required (ErrorMessage ="Please make sure the ZIP code has 5 digits")]
             public int zip { get; set; }
-            [Required (ErrorMessage ="Please enter your email address in the following format: test@example.com"]
+            [Required (ErrorMessage ="Please enter your email address in the following format: test@example.com")]
             public String emailAddress { get; set; }
             [Required]
             public int phone { get; set; }

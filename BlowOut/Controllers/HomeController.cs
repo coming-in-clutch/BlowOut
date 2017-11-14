@@ -74,5 +74,7 @@ namespace BlowOut.Controllers
                     break;
 
             }
+            return View();
         }
+    }
 }

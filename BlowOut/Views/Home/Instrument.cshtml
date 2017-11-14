@@ -29,5 +29,30 @@
     </ul>
 </div>
 
+<!--JS for buttons-->
+<script>
+    function New() {
+        Click2();
+        document.getElementById("price").innerHTML = "55"
+        document.getElementById("bNew").style.background = "#1F9E19"
+        document.getElementById("bUsed").style.background = "#FFFFFF"
+    }
+
+    function Used() {
+        Click2();
+        document.getElementById("price").innerHTML = "25"
+        document.getElementById("bUsed").style.background = "#1F9E19"
+        document.getElementById("bNew").style.background = "#FFFFFF"
+    }
+
+    function Click2() {
+        document.getElementById("used").innerHTML = "";
+        document.getElementById("new").innerHTML = "";
+        document.getElementById("price").innerHTML = "0";
+        document.getElementById("bUsed").style.background = "#FFFFFF"
+        document.getElementById("bNew").style.background = "#FFFFFF"
+    }
+</script>
+
 <h2>Instrument</h2>
 

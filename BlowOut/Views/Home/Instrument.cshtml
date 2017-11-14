@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Instrument";
+}
+
+<h2>Instrument Information</h2>
+<div class="row">
+    <div class="col-lg-5">
+        <p><b>Instrument name: </b>@ViewBag.instrumentName</p>
+        <p><b>Used Price: </b>$@ViewBag.usedPrice/ month </p>
+        <p><b>New Price: </b>$@ViewBag.newPrice/ month</p>
+    </div>
+    <div class="col-lg-7">
+        @*look at this action again to make sure i'm redirecting to the right page*@
+        <a href="@Url.Action("Create", "Clients")">
+            <img src=@Url.Content(ViewBag.instrumentImage) class="img-responsive" style="height:400px;" />
+        </a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Select Condition
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("New", "price", "Home")</li>
+        <li>@Html.ActionLink("Used", "price", "Home")</li>
+    </ul>
+</div>
+
+<h2>Instrument</h2>
+

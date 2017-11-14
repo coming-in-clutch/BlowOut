@@ -201,6 +201,7 @@
     <Content Include="Views\Home\Flute.cshtml" />
     <Content Include="Views\Home\Clarinet.cshtml" />
     <Content Include="Views\Home\Saxophone.cshtml" />
+    <Content Include="Views\Home\Instrument.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

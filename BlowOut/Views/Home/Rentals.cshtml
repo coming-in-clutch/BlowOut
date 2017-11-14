@@ -4,69 +4,48 @@
 }
 
 <h2>Rentals</h2>
+<h4>Click on any of the images for more information</h4>
 
-<!--Description of sorts-->
-<p>We sell instruments</p>
-
-<!--Column for Trumpet, Tuba, and Flute-->
 <div class="row">
-    <!--Trumpet-->
     <div class="col-md-4">
         <h3>Trumpet</h3>
-        <a href="@Url.Action("Trumpet","Home")">
+        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Trumpet", iUsed = 25, iNew = 55, sImage = "~/Content/Images/trumpet.jpg" }, null)">
             <img src="~/Content/Images/trumpet.jpg" class="img-responsive" />
         </a>
+
     </div>
-    <!--Trombone-->
     <div class="col-md-4">
         <h3>Trombone</h3>
-        <a href="@Url.Action("Trombone","Home")">
+        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Trombone", iUsed = 35, iNew = 60, sImage = "~/Content/Images/trombone.jpg" }, null )">
             <img src="~/Content/Images/trombone.jpg" class="img-responsive" />
         </a>
     </div>
-    <!--Tuba-->
     <div class="col-md-4">
         <h3>Tuba</h3>
-        <a href="@Url.Action("Tuba","Home")">
+        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Tuba", iUsed = 50, iNew = 70, sImage = "~/Content/Images/tuba.jpg" }, null)">
             <img src="~/Content/Images/tuba.jpg" class="img-responsive" />
         </a>
     </div>
 </div>
 
-<!--Column for Flute, Clarinet, and Saxophone-->
 <div class="row">
-    <!--Flute-->
     <div class="col-md-4">
         <h3>Flute</h3>
-        <a href="@Url.Action("Flute", "Home")">
+        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Flute", iUsed = 25, iNew = 40, sImage = "~/Content/Images/flute.jpg" })">
             <img src="~/Content/Images/flute.jpg" class="img-responsive" />
         </a>
     </div>
-    <!--Clarinet-->
     <div class="col-md-4">
         <h3>Clarinet</h3>
-        <a href="@Url.Action("Clarinet", "Home")">
+        <a href="@Url.Action("Instrument", "Home", new { sInstrument = "Clarinet", iUsed = 27, iNew = 35,  sImage = "~/Content/Images/clarinet.jpg" }, null)">
             <img src="~/Content/Images/clarinet.jpg" class="img-responsive" />
         </a>
+
     </div>
-    <!--Saxophone-->
     <div class="col-md-4">
         <h3>Saxophone</h3>
-        <a href="@Url.Action("Saxophone", "Home")">
+        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Saxophone", iUsed = 30, iNew = 42, sImage = "~/Content/Images/sax.jpg" }, null)">
             <img src="~/Content/Images/sax.jpg" class="img-responsive" />
         </a>
     </div>
 </div>
-
- <br /> <br /> <br />
-<!--FOOTER Text-->
-<div class="row">
-    <div class="col-md-12">
-        <pre>
-            Once 18 months has been achieved, the client owns the instrument. <br />
-            If they return it at any time before 3 months, there will be a $200 re-stocking fee. <br />
-            If they return it after 3 months they forfeit any equity in the instrument.
-        </pre>
-    </div>
-</div>
-

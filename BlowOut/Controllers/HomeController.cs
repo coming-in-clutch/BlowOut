@@ -32,34 +32,47 @@ namespace BlowOut.Controllers
             return View();
         }
 
-        public ActionResult Trumpet()
+        public ActionResult Instrument(String sInstrument, int iUsed, int iNew, String sImage)
         {
-            return View();
-        }
+            switch (sInstrument)
+            {
+                case ("Trumpet"):
+                    ViewBag.instrumentName = sInstrument;
+                    ViewBag.usedPrice = iUsed;
+                    ViewBag.newPrice = iNew;
+                    ViewBag.instrumentImage = sImage;
+                    break;
+                case ("Trombone"):
+                    ViewBag.instrumentName = sInstrument;
+                    ViewBag.usedPrice = iUsed;
+                    ViewBag.newPrice = iNew;
+                    ViewBag.instrumentImage = sImage;
+                    break;
+                case ("Tuba"):
+                    ViewBag.instrumentName = sInstrument;
+                    ViewBag.usedPrice = iUsed;
+                    ViewBag.newPrice = iNew;
+                    ViewBag.instrumentImage = sImage;
+                    break;
+                case ("Flute"):
+                    ViewBag.instrumentName = sInstrument;
+                    ViewBag.usedPrice = iUsed;
+                    ViewBag.newPrice = iNew;
+                    ViewBag.instrumentImage = sImage;
+                    break;
+                case ("Clarinet"):
+                    ViewBag.instrumentName = sInstrument;
+                    ViewBag.usedPrice = iUsed;
+                    ViewBag.newPrice = iNew;
+                    ViewBag.instrumentImage = sImage;
+                    break;
+                case ("Saxophone"):
+                    ViewBag.instrumentName = sInstrument;
+                    ViewBag.usedPrice = iUsed;
+                    ViewBag.newPrice = iNew;
+                    ViewBag.instrumentImage = sImage;
+                    break;
 
-        public ActionResult Trombone()
-        {
-            return View();
+            }
         }
-
-        public ActionResult Tuba()
-        {
-            return View();
-        }
-
-        public ActionResult Flute()
-        {
-            return View();
-        }
-
-        public ActionResult Clarinet()
-        {
-            return View();
-        }
-
-        public ActionResult Saxophone()
-        {
-            return View();
-        }
-    }
 }

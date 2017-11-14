@@ -206,12 +206,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Rentals.cshtml" />
-    <Content Include="Views\Home\Trumpet.cshtml" />
-    <Content Include="Views\Home\Trombone.cshtml" />
-    <Content Include="Views\Home\Tuba.cshtml" />
-    <Content Include="Views\Home\Flute.cshtml" />
-    <Content Include="Views\Home\Clarinet.cshtml" />
-    <Content Include="Views\Home\Saxophone.cshtml" />
     <Content Include="Views\Home\Instrument.cshtml" />
     <Content Include="Views\Clients\Create.cshtml" />
     <Content Include="Views\Clients\Delete.cshtml" />

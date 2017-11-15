@@ -66,6 +66,11 @@ namespace BlowOut.Controllers
             return View(db.Instruments.ToList());
         }
 
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
         public ActionResult Instrument(String sInstrument, int iUsed, int iNew, String sImage)
         {
             switch (sInstrument)

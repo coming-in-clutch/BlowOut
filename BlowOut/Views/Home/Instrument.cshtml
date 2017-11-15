@@ -24,35 +24,10 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li>@Html.ActionLink("New", "Client", "Home", new { sInstrument = ViewBag.instrumentName, iUsed = ViewBag.usedPrice, iNew = ViewBag.newPrice}, null)</li>
-        <li>@Html.ActionLink("Used", "Client", "Home", new { sInstrument = ViewBag.instrumentName, iUsed = ViewBag.usedPrice, iNew = ViewBag.newPrice }, null)</li>
+        <li>@Html.ActionLink("New", "Create", "Clients")</li>
+        <li>@Html.ActionLink("Used", "Create", "Clients")</li>
     </ul>
 </div>
-
-<!--JS for buttons-->
-<script>
-    function New() {
-        Click2();
-        document.getElementById("price").innerHTML = "55"
-        document.getElementById("bNew").style.background = "#1F9E19"
-        document.getElementById("bUsed").style.background = "#FFFFFF"
-    }
-
-    function Used() {
-        Click2();
-        document.getElementById("price").innerHTML = "25"
-        document.getElementById("bUsed").style.background = "#1F9E19"
-        document.getElementById("bNew").style.background = "#FFFFFF"
-    }
-
-    function Click2() {
-        document.getElementById("used").innerHTML = "";
-        document.getElementById("new").innerHTML = "";
-        document.getElementById("price").innerHTML = "0";
-        document.getElementById("bUsed").style.background = "#FFFFFF"
-        document.getElementById("bNew").style.background = "#FFFFFF"
-    }
-</script>
 
 <h2>Instrument</h2>
 

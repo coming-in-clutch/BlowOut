@@ -18,7 +18,8 @@ namespace BlowOut.Controllers
         // GET: Clients
         public ActionResult Index()
         {
-            return View(db.Clients.ToList());
+            return RedirectToRoute("Summary", "Home");
+            //return View(db.Clients.ToList());
         }
 
         // GET: Clients/Details/5

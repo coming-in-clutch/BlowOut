@@ -13,21 +13,32 @@ namespace BlowOut.Models
     {
             [Key]
             public int clientID { get; set; }
+
             [Required]
             public String firstName { get; set; }
+
             [Required]
             public String lastName { get; set; }
+
             [Required]
             public String address { get; set; }
+
             [Required]
             public String city { get; set; }
+
             [Required]
             public String state { get; set; }
-            [Required (ErrorMessage ="Please make sure the ZIP code has 5 digits")]
+
+            [Required ]
+            [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Please make sure the ZIP code has 5 digits"]
             public int zip { get; set; }
-            [Required (ErrorMessage ="Please enter your email address in the following format: test@example.com")]
-            public String emailAddress { get; set; }
+
             [Required]
+            [EmailAddress(ErrorMessage = "Please enter your email address in the following format: test@example.com")]
+            public String emailAddress { get; set; }
+
+            [Required]
+            [DataType(DataType.PhoneNumber)]
             public int phone { get; set; }
 
         

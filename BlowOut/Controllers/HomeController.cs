@@ -118,6 +118,14 @@ namespace BlowOut.Controllers
             return View();
         }
 
+        //THIS COULD BE VERY WRONG BUT WE NEED TO PASS INFORMATION FROM THE INSTRUMENT.CSHTML PAGE TO THE CLIENTS AND INSTRUMENTS CONTROLLERS SO HERE IS THIS!!!!!!!!!!!!!!!
+        //THIS WEBSITE MIGHT HELP
+        //https://stackoverflow.com/questions/7892094/how-to-redirect-to-index-from-another-controller
+        public ActionResult Client (string sInstrument, int iUsed, int iNew)
+        {
+            return RedirectToAction("Purchase", "Instruments");
+        }
+
         public ActionResult Summary(int clientID, int instrumentID)
         {
             Client client = db.Clients.Find(clientID);

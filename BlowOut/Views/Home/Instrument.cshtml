@@ -24,8 +24,8 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li>@Html.ActionLink("New", "price", "Home")</li>
-        <li>@Html.ActionLink("Used", "price", "Home")</li>
+        <li>@Html.ActionLink("New", "Client", "Home", new { sInstrument = ViewBag.instrumentName, iUsed = ViewBag.usedPrice, iNew = ViewBag.newPrice}, null)</li>
+        <li>@Html.ActionLink("Used", "Client", "Home", new { sInstrument = ViewBag.instrumentName, iUsed = ViewBag.usedPrice, iNew = ViewBag.newPrice }, null)</li>
     </ul>
 </div>
 

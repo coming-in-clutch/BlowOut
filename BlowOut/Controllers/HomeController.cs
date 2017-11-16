@@ -17,7 +17,7 @@ namespace BlowOut.Controllers
             return View();
         }
 
-
+        //this gets the auto-incremented ID to put later into the post create method
         [HttpGet]
 
         public ActionResult Create(int ID)
@@ -68,6 +68,7 @@ namespace BlowOut.Controllers
             return View(db.Instruments.ToList());
         }
 
+        //the way to pass all of the instrument information to the view
         public ActionResult Instrument(String sInstrument, int iUsed, int iNew, String sImage)
         {
             switch (sInstrument)
@@ -115,6 +116,8 @@ namespace BlowOut.Controllers
             return View();
         }
 
+         //this summary view takes in the client models and finds the ID that gets passed into the view, it will then take that ID with all of the data associated with 
+        //each individual id and load it up into the viewbag to later access the attributes
         public ActionResult Summary(int clientID, int instrumentID)
         {
             Client client = db.Clients.Find(clientID);

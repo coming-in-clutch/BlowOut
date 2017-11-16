@@ -1,17 +1,30 @@
-﻿@model BlowOut.Models.ClientInstrument
-
+﻿
 @{
     ViewBag.Title = "Summary";
 }
 
+@*this page will display the summary of each individual client based on their client ID and the instrument they chose*@
+
 <h2>Summary</h2>
 
-<p>Thank you, @ViewBag.Client.firstName</p><br/>
+<h4>Thank you @ViewBag.Client.firstName for your order. Here is the information regarding your order.</h4>
+<div class="row">
+    <div class="col-md-6">
+        <br />
+        <br />
+        <b style="font-size:15px;">Order ID: </b> <i style="font-size:15px;">
+            <i style="font-size:15px;">@ViewBag.Client.clientID</i>
+            <br />
+            <b style="font-size:15px;">Instrument Name: </b><i style="font-size:15px;">@ViewBag.Instrument.instrumentDesc</i>
+            <br />
+            <b style="font-size:15px;">Instrument type: </b><i style="font-size:15px;">@ViewBag.Instrument.type</i>
+            <br />
+            <b style="font-size:15px;">Monthly price: </b><i style="font-size:15px;">$@ViewBag.Instrument.price/ month</i>
+            <br />
+            <b style="font-size:15px;">Total payment after 18 months: </b><i style="font-size:15px;">$@(ViewBag.Instrument.price * 18)</i>
+    </div>
 
-<h4>Order ID:</h4>@ViewBag.Client.clientID
-<h4>Instrument Name: </h4>@ViewBag.Instrument.instrumentDesc
-<h4>Instrument type: </h4>@ViewBag.Instrument.type
-<h4>Instrument Description: </h4>@ViewBag.Instrument.instrumentDesc<br/>
-<img src="~/Content/Images/@(ViewBag.Instrument.instrumentDesc).jpg" style="height:200px;" />
-<h4>Monthly price: </h4>$@ViewBag.Instrument.price/ month
-<h4>Total payment after 18 months: </h4>$@(ViewBag.Instrument.price * 18)
+    <div class="col-md-6">
+        <img src="~/Content/Images/@(ViewBag.Instrument.instrumentDesc).jpg" style="height:250px;" />
+    </div>
+</div>

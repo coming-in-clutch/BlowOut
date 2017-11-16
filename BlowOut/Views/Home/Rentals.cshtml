@@ -6,10 +6,13 @@
 <h2>Rentals</h2>
 <h4>Click on any of the images for more information</h4>
 
+@*ALL NEW INSTRUMENTS*@
+
 <h3>New Instruments</h3>
 <div class="row">
     @foreach (var item in Model)
     {
+        @*only pick items that are new*@
         if (item.type == "new")
         {
             <div class="col-md-4" style="margin-bottom:1em">
@@ -34,12 +37,14 @@
 
 </div>
 
+@*ALL USED INSTRUMENTS*@
 <h3>Used Instruments</h3>
 <div class="row">
     @foreach (var item in Model)
     {
-        if (item.type == "used")
-        {
+        @*only pick items that are used*@
+    if (item.type == "used")
+    {
             <div class="col-md-4" style="margin-bottom:1em">
                 <div class="thumbnail">
 

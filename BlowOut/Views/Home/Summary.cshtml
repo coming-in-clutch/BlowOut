@@ -6,12 +6,12 @@
 
 <h2>Summary</h2>
 
-<p>Thank you, @ViewBag.Client.</p>
+<p>Thank you, @ViewBag.Client.firstName</p><br/>
 
-<h4>Client ID:</h4>@ViewBag.Client.clientID
+<h4>Order ID:</h4>@ViewBag.Client.clientID
 <h4>Instrument Name: </h4>@ViewBag.Instrument.instrumentDesc
 <h4>Instrument type: </h4>@ViewBag.Instrument.type
-<h4>Instrument Description: </h4>@ViewBag.Instrument.instrumentDesc
+<h4>Instrument Description: </h4>@ViewBag.Instrument.instrumentDesc<br/>
 <img src="~/Content/Images/@(ViewBag.Instrument.instrumentDesc).jpg" style="height:200px;" />
 <h4>Monthly price: </h4>$@ViewBag.Instrument.price/ month
 <h4>Total payment after 18 months: </h4>$@(ViewBag.Instrument.price * 18)

@@ -28,7 +28,7 @@ namespace BlowOut.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "clientID,firstName,lastName,address,city,state,zip,emailAddress,phone")] Client client, int id)
+        public ActionResult Create([Bind(Include = "clientID,firstName,lastName,address,city,state,zip,emailAddress,phone")] Client client, int ID)
         {
             if (ModelState.IsValid)
             {
@@ -38,7 +38,7 @@ namespace BlowOut.Controllers
                 db.SaveChanges();
 
                 //lookup instrument
-                Instrument instrument = db.Instruments.Find(id);
+                Instrument instrument = db.Instruments.Find(ID);
 
                 //update instrument
                 instrument.clientID = client.clientID;
@@ -137,10 +137,7 @@ namespace BlowOut.Controllers
             return View();
         }
 
-        public ActionResult Summary()
-        {
-            return View();
-        }
+
 
     }
 }

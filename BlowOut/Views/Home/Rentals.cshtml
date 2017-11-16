@@ -1,4 +1,4 @@
-﻿
+﻿@model  IEnumerable<BlowOut.Models.Instrument>
 @{
     ViewBag.Title = "Rentals";
 }
@@ -6,46 +6,103 @@
 <h2>Rentals</h2>
 <h4>Click on any of the images for more information</h4>
 
+<h3>New Instruments</h3>
 <div class="row">
-    <div class="col-md-4">
-        <h3>Trumpet</h3>
-        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Trumpet", iUsed = 25, iNew = 55, sImage = "~/Content/Images/trumpet.jpg" }, null)">
-            <img src="~/Content/Images/trumpet.jpg" class="img-responsive" />
-        </a>
+    @foreach (var item in Model)
+    {
+        if (item.type == "new")
+        {
+            <div class="col-md-4" style="margin-bottom:1em">
+                <div class="thumbnail">
 
-    </div>
-    <div class="col-md-4">
-        <h3>Trombone</h3>
-        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Trombone", iUsed = 35, iNew = 60, sImage = "~/Content/Images/trombone.jpg" }, null )">
-            <img src="~/Content/Images/trombone.jpg" class="img-responsive" />
-        </a>
-    </div>
-    <div class="col-md-4">
-        <h3>Tuba</h3>
-        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Tuba", iUsed = 50, iNew = 70, sImage = "~/Content/Images/tuba.jpg" }, null)">
-            <img src="~/Content/Images/tuba.jpg" class="img-responsive" />
-        </a>
-    </div>
+                    <img src="~/Content/Images/@(Html.DisplayFor(modelItem => item.instrumentDesc)).jpg" style="height:100px">
+                    <div class="row" style="margin-top:1em">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7 caption">
+                            @Html.DisplayFor(modelItem => item.instrumentDesc) - $@item.price
+                        </div>
+                        <div class="col-md-4">
+
+                            @Html.ActionLink("Rent", "Create", "Home", new { id = Html.DisplayFor(modelItem => item.instrumentID) }, new { @class = "btn btn-primary btn-large" })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    }
+
 </div>
 
+<h3>Used Instruments</h3>
 <div class="row">
-    <div class="col-md-4">
-        <h3>Flute</h3>
-        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Flute", iUsed = 25, iNew = 40, sImage = "~/Content/Images/flute.jpg" })">
-            <img src="~/Content/Images/flute.jpg" class="img-responsive" />
-        </a>
-    </div>
-    <div class="col-md-4">
-        <h3>Clarinet</h3>
-        <a href="@Url.Action("Instrument", "Home", new { sInstrument = "Clarinet", iUsed = 27, iNew = 35,  sImage = "~/Content/Images/clarinet.jpg" }, null)">
-            <img src="~/Content/Images/clarinet.jpg" class="img-responsive" />
-        </a>
+    @foreach (var item in Model)
+    {
+        if (item.type == "used")
+        {
+            <div class="col-md-4" style="margin-bottom:1em">
+                <div class="thumbnail">
 
-    </div>
-    <div class="col-md-4">
-        <h3>Saxophone</h3>
-        <a href="@Url.Action("Instrument","Home", new { sInstrument = "Saxophone", iUsed = 30, iNew = 42, sImage = "~/Content/Images/sax.jpg" }, null)">
-            <img src="~/Content/Images/sax.jpg" class="img-responsive" />
-        </a>
-    </div>
+                    <img src="~/Content/Images/@(Html.DisplayFor(modelItem => item.instrumentDesc)).jpg" style="height:100px">
+                    <div class="row" style="margin-top:1em">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7 caption">
+                            @Html.DisplayFor(modelItem => item.instrumentDesc) - $@item.price
+                        </div>
+                        <div class="col-md-4">
+
+                            @Html.ActionLink("Rent", "Create", "Home", new { id = Html.DisplayFor(modelItem => item.instrumentID) }, new { @class = "btn btn-primary btn-large" })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+
+    }
+
 </div>
+
+@*<div class="row">
+        <div class="col-md-4">
+            <h3>Trumpet</h3>
+            <a href="@Url.Action("Instrument","Home", new { sInstrument = "Trumpet", iUsed = 25, iNew = 55, sImage = "~/Content/Images/trumpet.jpg" }, null)">
+                <img src="~/Content/Images/trumpet.jpg" class="img-responsive" />
+            </a>
+
+        </div>
+        <div class="col-md-4">
+            <h3>Trombone</h3>
+            <a href="@Url.Action("Instrument","Home", new { sInstrument = "Trombone", iUsed = 35, iNew = 60, sImage = "~/Content/Images/trombone.jpg" }, null )">
+                <img src="~/Content/Images/trombone.jpg" class="img-responsive" />
+            </a>
+        </div>
+        <div class="col-md-4">
+            <h3>Tuba</h3>
+            <a href="@Url.Action("Instrument","Home", new { sInstrument = "Tuba", iUsed = 50, iNew = 70, sImage = "~/Content/Images/tuba.jpg" }, null)">
+                <img src="~/Content/Images/tuba.jpg" class="img-responsive" />
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Flute</h3>
+            <a href="@Url.Action("Instrument","Home", new { sInstrument = "Flute", iUsed = 25, iNew = 40, sImage = "~/Content/Images/flute.jpg" })">
+                <img src="~/Content/Images/flute.jpg" class="img-responsive" />
+            </a>
+        </div>
+        <div class="col-md-4">
+            <h3>Clarinet</h3>
+            <a href="@Url.Action("Instrument", "Home", new { sInstrument = "Clarinet", iUsed = 27, iNew = 35,  sImage = "~/Content/Images/clarinet.jpg" }, null)">
+                <img src="~/Content/Images/clarinet.jpg" class="img-responsive" />
+            </a>
+
+        </div>
+        <div class="col-md-4">
+            <h3>Saxophone</h3>
+            <a href="@Url.Action("Instrument","Home", new { sInstrument = "Saxophone", iUsed = 30, iNew = 42, sImage = "~/Content/Images/sax.jpg" }, null)">
+                <img src="~/Content/Images/sax.jpg" class="img-responsive" />
+            </a>
+        </div>
+    </div>*@

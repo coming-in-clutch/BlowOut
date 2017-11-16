@@ -15,12 +15,19 @@ namespace BlowOut.Controllers
     {
         private BlowOutContext db = new BlowOutContext();
 
-        // GET: Clients
         public ActionResult Index()
         {
-            return RedirectToRoute("Summary", "Home");
-            //return View(db.Clients.ToList());
+            return View(db.Clients.ToList());
         }
+
+
+        //// GET: Clients
+        //public ActionResult Index()
+        //{
+
+        //    return RedirectToAction("Create", "Home");
+        //    //return View(db.Clients.ToList());
+        //}
 
         // GET: Clients/Details/5
         public ActionResult Details(int? id)

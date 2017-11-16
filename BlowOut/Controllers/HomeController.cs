@@ -28,7 +28,7 @@ namespace BlowOut.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "clientID,firstName,lastName,address,city,state,zip,emailAddress,phone")] Client client, int id)
+        public ActionResult Create([Bind(Include = "clientID,firstName,lastName,address,city,state,zip,emailAddress,phone")] Client client, int ID)
         {
             if (ModelState.IsValid)
             {
@@ -38,7 +38,7 @@ namespace BlowOut.Controllers
                 db.SaveChanges();
 
                 //lookup instrument
-                Instrument instrument = db.Instruments.Find(id);
+                Instrument instrument = db.Instruments.Find(ID);
 
                 //update instrument
                 instrument.clientID = client.clientID;
@@ -47,6 +47,7 @@ namespace BlowOut.Controllers
                 db.SaveChanges();
 
                 return RedirectToAction("Summary", new { client.clientID, instrument.instrumentID });
+
             }
 
             return View(client);
@@ -63,12 +64,8 @@ namespace BlowOut.Controllers
 
         public ActionResult Rentals()
         {
+            //return View();
             return View(db.Instruments.ToList());
-        }
-
-        public ActionResult Contact()
-        {
-            return View();
         }
 
         public ActionResult Instrument(String sInstrument, int iUsed, int iNew, String sImage)
@@ -118,14 +115,6 @@ namespace BlowOut.Controllers
             return View();
         }
 
-        //THIS COULD BE VERY WRONG BUT WE NEED TO PASS INFORMATION FROM THE INSTRUMENT.CSHTML PAGE TO THE CLIENTS AND INSTRUMENTS CONTROLLERS SO HERE IS THIS!!!!!!!!!!!!!!!
-        //THIS WEBSITE MIGHT HELP
-        //https://stackoverflow.com/questions/7892094/how-to-redirect-to-index-from-another-controller
-        public ActionResult Client (string sInstrument, int iUsed, int iNew)
-        {
-            return RedirectToAction("Purchase", "Instruments");
-        }
-
         public ActionResult Summary(int clientID, int instrumentID)
         {
             Client client = db.Clients.Find(clientID);
@@ -134,13 +123,14 @@ namespace BlowOut.Controllers
             ViewBag.Client = client;
             ViewBag.Instrument = instrument;
 
+
             return View();
         }
 
-        public ActionResult Summary()
-        {
-            return View();
-        }
+        //public ActionResult Summary()
+        //{
+        //    return View();
+        //}
 
     }
 }

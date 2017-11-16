@@ -1,7 +1,9 @@
-﻿
+﻿@*@model IEnumerable<BlowOut.Models.Instrument>*@
+
 @{
     ViewBag.Title = "Instrument";
 }
+
 
 <h2>Instrument Information</h2>
 <div class="row">
@@ -18,16 +20,16 @@
     </div>
 </div>
 
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Select Condition
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li>@Html.ActionLink("New", "Create", "Clients")</li>
-        <li>@Html.ActionLink("Used", "Create", "Clients")</li>
-    </ul>
-</div>
 
-<h2>Instrument</h2>
+
+@*<div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+           Select Condition
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("New", "Create", "Home", new { id = item.instrumentID })</li>
+           <li>@Html.ActionLink("Used", "Create", "Home")</li>
+        </ul>
+    </div>*@
 

@@ -37,8 +37,8 @@ namespace BlowOut.Models
             [EmailAddress(ErrorMessage = "Please enter your email address in the following format: test@example.com")]
             public String emailAddress { get; set; }
 
-            //[Required]
-            //PUT IN SOMETHING TO VALIDATE THE PHONE NUMBER
+            [Required]
+            [RegularExpression("\\(\\d{3}\\)\\s\\d{3}-\\d{4}", ErrorMessage = "Phone numbers should be formatted (xxx) xxx-xxxx")]
             public String phone { get; set; }
 
         
